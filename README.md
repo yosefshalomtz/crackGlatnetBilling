@@ -1,2 +1,11 @@
-After logging in with your account to the desktop, download and run the kill.exe file. The time counter will disappear and you can use forever without deducting the remaining usage time on your account.
-This project was created as a demonstration of ability.
+## Glatnet Billing Crack
+
+This project demonstrates the ability to bypass the Glatnet billing time counter.
+
+### Usage
+
+1. Log in to your account on the desktop.
+2. Download and run the `kill.exe` file from the `build` directory.
+3. The time counter will disappear, allowing unlimited usage without deducting from your remaining account time.
+
+> **Note:** This project is for demonstration purposes only.
