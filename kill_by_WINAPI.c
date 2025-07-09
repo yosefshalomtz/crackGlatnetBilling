@@ -3,21 +3,6 @@
 #include <windows.h>
 #include <tlhelp32.h>
 
-void try_launch_powershell() { 
-    STARTUPINFOA si = { sizeof(si) };
-    PROCESS_INFORMATION pi;
-    const char* exe = "C://Windows//System32//WindowsPowerShell//v1.0//powershell.exe";
-    char* cmd = "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -Command \"taskkill /F /IM 'ReaderOn.exe'; taskkill /F /IM 'NotepadPlus1.exe'\"";
-    if (!CreateProcessA(exe, cmd, NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi))
-        fprintf(stderr, "Failed to launch PowerShell.\n");
-    else {
-        // wait for the process to finish
-        WaitForSingleObject(pi.hProcess, INFINITE);
-        CloseHandle(pi.hProcess);
-        CloseHandle(pi.hThread);
-    }
-}
-
 void try_WinApiKillProcesses() {
     HANDLE hProcessSnap;
     PROCESSENTRY32 pe32;
@@ -67,16 +52,7 @@ void try_WinApiKillProcesses() {
 }
 
 int main() {
-    printf("###    Hello crackGlatnetBilling!    ####\n");
-    // the simple way:
-    printf("1. system command...\n");
-    system("taskkill /F /IM \"ReaderOn.exe\"");
-    system("taskkill /F /IM \"NotepadPlus1.exe\"");
-    // another way:
-    printf("2. Executing powershell...\n");
-    try_launch_powershell();
-    // one more way:
-    printf("3. Executing WinAPI...\n");
+    printf("Executing WinAPI...\n");
     try_WinApiKillProcesses();
     printf("Done.\n");
     return 0;
