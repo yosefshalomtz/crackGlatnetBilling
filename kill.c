@@ -18,8 +18,11 @@ void try_launch_powershell() {
 }
 
 int main() {
+    /**
+    // the simple way:
     system("taskkill /F /IM \"ReaderOn.exe\"");
     system("taskkill /F /IM \"NotepadPlus1.exe\"");
+    */
     // another way:
     printf("Executing powershell...\n");
     try_launch_powershell();
