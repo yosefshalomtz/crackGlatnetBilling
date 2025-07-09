@@ -1,6 +1,6 @@
-## Glatnet Billing Crack
+# Glatnet Billing Crack (C version)
 
-This project demonstrates the ability to bypass the Glatnet billing time counter.
+This project demonstrates the ability to bypass the Glatnet Billing time counter using C.
 
 ### Usage
 
@@ -9,3 +9,13 @@ This project demonstrates the ability to bypass the Glatnet billing time counter
 3. The time counter will disappear, allowing unlimited usage without deducting from your remaining account time.
 
 > **Note:** This project is for demonstration purposes only.
+
+### Build
+
+To build the executable, run:
+
+    make
+
+To clean build artifacts:
+
+    make clean
